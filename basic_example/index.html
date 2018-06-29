@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="https://vuejs.org/js/vue.js"></script>
+</head>
+<body>
+    <div id="myapp"></div>
+    <div id="app">
+        <h1 v-html="name"></h1>
+        <p v-html="greet()"></p>
+        <span v-html="age"></span>
+        <button v-on:click="add">+</button>
+        <button v-on:click="substract">-</button>
+        <input type="text" v-model="search" />
+        <p v-html="trimMessage"></p>
+        <p v-html="git"></p>
+        <div id="canvas" v-on:mousemove="updateXY">{{ x }} , {{ y }}</div>
+        <a @click.prevent="click" href="https://google.com">Google</a>
+        <alert-box title="asd" message="asdasdaSd"></alert-box>
+        <input type="text" ref="input" />
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
