@@ -4,6 +4,7 @@
     </header>
 </template>
 <script>
+import { bus } from '../constants';
 export default {
     props:{
         title: {
@@ -16,7 +17,9 @@ export default {
     },
     methods:{
         changeTitle:function(){
-            this.$emit("changeTitle", "Wooo");
+            // this.title = "Wooo change again";
+            bus.$emit("titleChange", "Wooo change again");
+            // this.$emit("changeTitle", "Wooo");
         }
     }
     

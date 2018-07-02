@@ -1,16 +1,29 @@
 <template>
   <div id="ninjas">
-    <ul>
-        <li v-for="n1 in myNinjas" :key="n1.id" @click="n1.show = !n1.show">
-            <h2>{{n1.name}}</h2>
-            <h3 v-show="n1.show">{{n1.skills}}</h3>
-        </li>
-    </ul>
+        {{ title }}
+        <slot name="prefix"></slot>
+        <ul>
+            <li v-toChangeColor v-for="n1 in myNinjas" :key="n1.id" @click="n1.show = !n1.show">
+                <h2 v-rainbow="owl">{{n1.name | toUpper}}</h2>
+                <h3 v-show="n1.show">{{n1.skills | snippets}}</h3>
+            </li>
+        </ul>
+        <slot name="suffix"></slot>
   </div>
 </template>
 
 <script>
+import ninJaMixin from '../mixins/Ninja'
 export default {
+    beforeCreate(){
+
+    },
+    created(){
+
+    },
+    beforeMont(){
+
+    },
     props: {
         myNinjas: {
             type: Array,
@@ -18,8 +31,28 @@ export default {
         }
     },
     data: function() {
-        return {}
-    }
+        return {
+            owl: ""
+        }
+    },
+    methods: {},
+    watch: {},
+    mounted(){
+
+    },
+    beforeUpdate(){
+
+    },
+    update(){
+
+    },
+    beforeDestroy(){
+
+    },
+    destroyed(){
+
+    },
+    mixins: [ninJaMixin]
 }
 </script>
 

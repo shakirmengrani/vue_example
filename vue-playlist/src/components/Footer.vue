@@ -5,12 +5,22 @@
     </footer>
 </template>
 <script>
+import {bus} from '../constants';
 export default {
-    props:["title"],
+    props:{
+        title: {
+            type: String, required: true
+        }
+    },
     data(){
         return{
             copyright: 'Copyright 2017 Vue Ninjas'
         }
+    },
+    created(){
+        bus.$on("titleChange", (data)=>{
+            this.title = data;
+        });
     }
 }
 </script>
