@@ -1,6 +1,10 @@
 <template>
     <header v-on:click="changeTitle">
         <h1>{{ title }}</h1>
+        <nav>
+            <router-link to="/login">Login</router-link>
+            <router-link to="/register">Register</router-link>
+        </nav>
     </header>
 </template>
 <script>

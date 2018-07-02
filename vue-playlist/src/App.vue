@@ -1,7 +1,7 @@
 <template>
   <div>
     <app-header v-bind:title="title" v-on:changeTitle="updateTitle($event)"></app-header>   
-    <h1>{{msg}}</h1>
+    <!-- <h1>{{msg}}</h1>
     <div>{{greeting()}}</div>
     <keep-alive>
       <component :is="component"></component>
@@ -12,7 +12,8 @@
     <ninja v-bind:my-ninjas="n">
       <span slot="prefix">Pagal</span>
       <span slot="suffix">Kutta</span>
-    </ninja>
+    </ninja> -->
+    <router-view></router-view>
     <app-footer v-bind:title="title"></app-footer>
   </div>
 </template>
@@ -60,6 +61,6 @@ export default {
 
 <style>
   body{
-    margin: 0px;
+    margin: 0px auto;
   }
 </style>
