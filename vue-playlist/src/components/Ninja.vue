@@ -35,8 +35,12 @@ export default {
             owl: ""
         }
     },
-    methods: {},
-    watch: {},
+    methods: {
+        
+    },
+    watch: {
+
+    },
     mounted(){
 
     },
