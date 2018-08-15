@@ -10,7 +10,7 @@ let transporter = nodemailer.createTransport({
     }
 });
 let mailOptions = {
-    from: '"internetforeveryone" <no-reply@internetforeveryone.pk>', // sender address
+    from: '"Internet For Everything" <no-reply@internetforeveryone.pk>', // sender address
     to: 'shakir.mengrani@gmail.com', // list of receivers
     subject: 'Hello ✔', // Subject line
     text: 'Hello world?', // plain text body
