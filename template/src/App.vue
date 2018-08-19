@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <img style="width: 180px" alt="logo" class="image" src="./assets/logo.png" />
+    <!-- <img style="width: 180px" alt="logo" class="image" src="./assets/logo.png" /> -->
     <page title="Internet For Everything">
-      <router-view slot="content" />
+      <router-view slot="content"></router-view>
     </page>
   </div>
 </template>
@@ -13,6 +13,9 @@ export default {
   name: 'App',
   components:{
     page: Page
+  },
+  data(){
+    return {};
   }
 }
 </script>
