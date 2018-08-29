@@ -20,9 +20,9 @@
 
 <script>
 import ninjas from './components/Ninja.vue'
-import loginForm from './components/forms/Login.vue'
-import registerForm from './components/forms/Register.vue'
-import blogForm from './components/forms/Blog.vue'
+// import loginForm from './components/forms/Login.vue'
+// import registerForm from './components/forms/Register.vue'
+// import blogForm from './components/forms/Blog.vue'
 export default {
   components: {
     'loginForm': loginForm,
