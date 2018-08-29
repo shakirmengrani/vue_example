@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'vue-nuxt',
+    titleTemplate: 'Internet For Everything - %s',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -16,11 +16,14 @@ module.exports = {
   /*
   ** Modules
   */
-  modules:['bootstrap-vue/nuxt'],
+
+  modules:['bootstrap-vue/nuxt', ['@nuxtjs/google-adsense', {id: 'ca-pub-5899203281808039', pageLevelAds: true, test: true}]],
+
   /*
   ** Plugins
   */
-  plugins:[{src: './plugins/firebase.js', ssr: true}, {src: './plugins/cookie.js', ssr: true}],
+  plugins:[{src: './plugins/firebase.js', ssr: true}],
+  
   router:{
     middleware: 'auth'
   },

@@ -22,10 +22,6 @@ import pageMixin from '@/mixins/pageMixins'
 export default {
     name: "home",
     mixins:[pageMixin],
-    components: {},
-    meta:{
-        requireAuth: true
-    },
     data: function(){
       return {
         head:{

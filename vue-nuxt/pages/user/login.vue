@@ -44,7 +44,11 @@ export default {
     },
     methods:{
         login: function(){
-            this.sigin(this.email, this.password)
+            this.sigin({
+                provider: "email",
+                email: this.email, 
+                password: this.password
+            })
         }
     },
 
